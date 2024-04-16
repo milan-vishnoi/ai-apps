@@ -43,3 +43,45 @@ async function setApiKeyInHeader() {
       console.log("Error fetching JSON file:", error);
     }
   }
+
+  textarea.addEventListener("keypress", (e) => {
+    if (e.key === "Enter"){
+      e.preventDefault();
+      setRequestBody(e.target.value);
+      displayUserMessage(e.target.value);
+      e.target.value = "";
+      getResponse();
+  }
+  });
+  
+  function setRequestBody(message) {
+    requestBody.message = message;
+    config.body = JSON.stringify(requestBody);
+    console.log(requestBody);
+  }
+  
+  function displayUserMessage(message) {
+    const messageEl = document.createElement("p");
+    messageEl.classList.add("user-message");
+    messageEl.innerText = "You:\n" + message;
+    messages.appendChild(messageEl);
+  }
+  
+  async function getResponse() {
+    const resp = await fetch(API_URL, config);
+  
+    const data = await resp.json();
+  
+    displayAIMessage(data.text);
+    requestBody.chat_history = data.chat_history;
+    console.log(data.text);
+    console.log(data.chat_history);
+  }
+  
+  
+  function displayAIMessage(message) {
+    const messageEl = document.createElement("p");
+    messageEl.classList.add("ai-message");
+    messageEl.innerText = "AI:\n" + message;
+    messages.appendChild(messageEl);
+  }
