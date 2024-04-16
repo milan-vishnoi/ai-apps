@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .messages {
     display: flex;
     flex-direction: column;
@@ -5,9 +10,12 @@
     width: 100%;
     border: 2px solid;
     margin-bottom: 10px;
+    overflow-y: scroll;
+    height: 60vh;
 
 }
 .user-message {
+    position: relative;
     background-color:beige;
     border: 2px solid gold;
     width: 75%;
@@ -22,4 +30,8 @@
     border: 2px solid rebeccapurple;
     width: 75%;
     align-self: flex-start;
+}
+
+.chat-window {
+    height: 15vh;
 }
