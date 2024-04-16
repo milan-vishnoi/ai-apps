@@ -8,10 +8,11 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    border: 2px solid;
+    /* border: 2px solid; */
     margin-bottom: 10px;
     overflow-y: scroll;
     height: 60vh;
+    background-color: lightcyan;
 
 }
 .user-message {
@@ -34,4 +35,13 @@
 
 .chat-window {
     height: 15vh;
+    background-color:lightgreen;
+}
+
+h1 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: chocolate;
 }
