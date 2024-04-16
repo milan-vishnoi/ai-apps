@@ -13,6 +13,8 @@
     overflow-y: scroll;
     height: 60vh;
     background-color: lightcyan;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .user-message {
@@ -36,6 +38,8 @@
 .chat-window {
     height: 15vh;
     background-color:lightgreen;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -44,4 +48,13 @@ h1 {
     text-align: center;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: chocolate;
+    height: 12vh;
+}
+
+textarea {
+    width: 70%;
+    height: 60%;
+    margin-top: 5px;
+    font-size: 1rem;
+    align-self: flex-end;
 }
