@@ -65,6 +65,7 @@ async function setApiKeyInHeader() {
     messageEl.classList.add("user-message");
     messageEl.innerText = "You:\n" + message;
     messages.appendChild(messageEl);
+    messages.scrollTop = messages.scrollHeight;
   }
   
   async function getResponse() {
@@ -84,4 +85,5 @@ async function setApiKeyInHeader() {
     messageEl.classList.add("ai-message");
     messageEl.innerText = "AI:\n" + message;
     messages.appendChild(messageEl);
+    messages.scrollTop = messages.scrollHeight;
   }
